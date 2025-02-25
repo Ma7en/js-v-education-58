@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * navbar variables
@@ -12,17 +12,11 @@ const overlay = document.querySelector("[data-overlay]");
 const navElemArr = [navOpenBtn, navCloseBtn, overlay];
 
 for (let i = 0; i < navElemArr.length; i++) {
-
-  navElemArr[i].addEventListener("click", function () {
-
-    navbar.classList.toggle("active");
-    overlay.classList.toggle("active");
-
-  });
-
+    navElemArr[i].addEventListener("click", function () {
+        navbar.classList.toggle("active");
+        overlay.classList.toggle("active");
+    });
 }
-
-
 
 /**
  * header sticky functionality
@@ -31,12 +25,10 @@ for (let i = 0; i < navElemArr.length; i++) {
 const header = document.querySelector("[data-header]");
 
 window.addEventListener("scroll", function () {
-
-  window.scrollY >= 20 ? header.classList.add("active") : header.classList.remove("active");
-
+    window.scrollY >= 20
+        ? header.classList.add("active")
+        : header.classList.remove("active");
 });
-
-
 
 /**
  * go top
@@ -45,7 +37,7 @@ window.addEventListener("scroll", function () {
 const goTopBtn = document.querySelector("[data-go-top]");
 
 window.addEventListener("scroll", function () {
-
-  window.scrollY >= 800 ? goTopBtn.classList.add("active") : goTopBtn.classList.remove("active");
-
+    window.scrollY >= 800
+        ? goTopBtn.classList.add("active")
+        : goTopBtn.classList.remove("active");
 });
